@@ -1,0 +1,425 @@
+@font-face {
+    font-family: 'neueu';
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: neueu;
+}
+html,body{
+    width: 100%;
+    height: 100%  ;
+}
+
+#page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+    overflow: hidden;
+
+}
+nav{
+    width: 100%;
+    height: 15vh;
+    padding: 2vw 2vw;
+    display: flex;
+    justify-content: space-between;
+}
+#navRight ul{
+    display: flex;
+    list-style: none;
+    gap: 1.5vw;
+}
+#navRight ul li{
+    padding :0.8vw 1.5vw;
+    border: 1px solid rgb(131, 129, 129);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+#navRight ul li a{
+    text-decoration: none;
+    color: rgb(31, 30, 30);
+    z-index: 9;
+    position: relative;
+    font-size: 500;
+}
+#navRight ul li::after{
+    content: '';
+    height: 110%;
+    width: 110%;
+    position: absolute;
+    background-color: rgb(11, 11, 11);
+    left: -2%;
+    bottom: -115%;
+    border-radius: 100%;
+    transition: all ease 0.3s;
+}
+#navRight ul li:hover::after{
+    bottom: -5%;
+    border-radius: 0;
+}
+#navRight ul li:hover a{
+    color: white;
+}
+#center{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: 2vw;
+    border-bottom: 1px solid rgb(172, 169, 169);
+}
+#centerLeft{
+    width: 30vw;
+    font-size: 2vw;
+    font-weight: bold;
+}
+#centerRight{
+    font-family: 'Neueu Haas Grotesk Display Pro';
+}
+#centerRight h1{
+    font-size: 12vw;
+    line-height: 10vw;
+    text-align: right;
+}
+#page1 video{
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 4vw;
+}
+#shape1{
+    width: 30vw;
+    height: 30vw;
+    background-color: #FE330A;
+    position: absolute;
+    right: 0;
+    top: 42%;
+    filter: blur(25px);
+    border-top-left-radius: 50%;
+
+}
+#shape2{
+    width: 30vw;
+    height: 30vw;
+    background-color: #FE330A;
+    position: absolute;
+    right: 10%;
+    top: 46%;
+    filter: blur(25px);
+    border-radius: 50%;
+    animation-name: shape;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#shape3{
+    width: 30vw;
+    height: 30vw;
+    background-color: #FE330A;
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    border-radius: 50%; 
+    filter: blur(25px);
+    animation-name: shape;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes shape {
+    from{
+        transform: translate(-8%, 10%);
+    }
+    to{
+        transform: translate(10%, -8%);
+    }
+}
+@keyframes shape1 {
+    from{
+        transform: translate(-5%, 15);
+    }
+    to{
+        transform: translate(15%, -5%);
+    }
+}
+
+#page2{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+    padding: 7vw 0;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
+    position: relative;
+}
+#text-moving{
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#text-moving::-webkit-scrollbar{
+    display: none;
+}
+.box{
+    white-space: nowrap ;
+    /* overflow-x: auto; */
+    display: inline-block;
+    animation-name: textMove;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+/* #text-moving::-webkit-scrollbar{
+    display: none;
+} */
+.box h1{
+    font-size: 9vw;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.gola{
+    width: 3vw;
+    height: 3vw;
+    background-color: #FE330A;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 3vw;
+}
+@keyframes textMove {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#page2Bottom{
+    width: 100%;
+    min-height: 80vh;
+    padding: 10vw 7vw;
+    display: flex;
+    align-items: center;
+}
+#page2Bottom h1{
+    /* padding-top: -5vw; */
+    font-size: 5vw;
+    padding-right: 5vw; 
+    line-height: 5vw;
+    z-index: 9;
+}
+#page2BottomRight{
+    padding-top: 10vw;
+    width: 40%;
+}
+#page2BottomRight img{
+    width: 22vw;
+    height: 15vw;
+    border-radius: 10px;
+    margin-bottom: 3vw;
+}
+#pichuk{
+    width: 37vw;
+    height: 40vw;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#FE330A,#f37d1d);
+    position: absolute;
+    top: 53%;
+    left: 25%;
+    filter: blur(30px); 
+    animation-name: pichuk;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes pichuk {
+    from{
+        transform: translate(-10%,10%) skew(0);
+        width: 43vw;
+    }
+    to{
+        transform: translate(10%,-10%) skew(-12deg);
+        width: 37vw;
+    }
+}
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #EFEAE3;
+}
+.elem{
+    width: 100%;
+    height: 8.6vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    padding: 0 2vw;
+    border-bottom: 1px solid rgb(173, 169, 169);
+    overflow: hidden;
+}
+.elem h1{
+    font-size: 3.6vw;
+}
+.elem h5{
+    text-align: end;
+}
+.elem p{
+    color: gray;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #f37d1d;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+    z-index: 2;
+}
+.elem:hover .overlay{
+    top: 0;
+}
+
+#staticBox{
+    width: 25vw;
+    height: 30vw;
+    /* background-color: red; */
+    position: absolute;
+    position: fixed;
+    z-index: 99;
+    top: 20%;
+    right: 28%;
+    border-radius: 15px;
+    background-size: cover;
+    display: none;
+    transition: all ease 0.2s;
+    /* background-image: url('./images/image (1).webp'); */
+}
+#allProject{
+    width: 100%;
+    height: 10vw;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+}
+#allProject div{
+    width: 12vw;
+    height: 3vw;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: all ease 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+#allProject div::after{
+    content: '';
+    height: 110%;
+    width: 10%;
+    position: absolute;
+    background-color: rgb(11, 11, 11);
+    left: 45%;
+    bottom: -115%;
+    border-radius: 100%;
+    transition: all ease 0.3s;
+}
+#allProject div:hover::after{
+    bottom: -5%;
+    border-radius: 0;
+    width: 110%;
+    left: -2%;
+    z-index: -1;
+}
+#allProject div:hover{
+    color: #EFEAE3;
+    z-index: 0;
+}
+#allProject span{
+    font-size: 30px;
+}
+#page4{
+    width: 100%;
+    min-height: 60vh;
+    background-color: #f37d1d;
+
+}
+#page5{
+    width: 100%;
+    height: 95vh;
+    /* background-color: transparent; */
+}
+.main{
+    position: relative;
+}
+#footer{
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f82b07;
+    color: #fff;
+    bottom: 0;
+    z-index: -990;
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
+    padding: 0 2vw;
+
+}
+
+#footer h1{
+    border-bottom: 1px solid rgb(10, 9, 9);
+    font-size: 23vw ;
+    line-height: 25vw;
+}
+#footer-bottom{
+    height: 5vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4vw;
+}
+#footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 4vw;
+}
+#footer-top h3{
+    font-size: 2.5vw;
+}
+#footer-top h4{
+    font-size: 1.6vw;
+}
+#footer-top-left{
+    padding-right: 2vw;
+}
+#footer-top-left input{
+    margin-top: 4vw;
+    width: 20vw;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #bababa;
+    color: black;
+    padding: 1vw 0;
+    cursor: pointer;  
+}
+
+
+ 
